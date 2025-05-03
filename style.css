@@ -540,6 +540,20 @@ background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0
   background: #ff3333;
 }
 
+/* Inicializando o modal com opacidade 0 */
+#modal {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  visibility: hidden; /* Para garantir que o modal não ocupe espaço */
+}
+
+/* Quando o modal for exibido */
+#modal[open] {
+  opacity: 1;
+  visibility: visible;
+}
+
+
 
 /* footer */
 
