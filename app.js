@@ -5,22 +5,27 @@
   const cards = document.querySelectorAll(".card");
   const container = document.querySelector(".container_card");
 
-  searchInput.addEventListener("input", function () {
-    const searchTerm = searchInput.value.toLowerCase();
-    let visibleCards = 0;
+function normalizeText(text) {
+  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
 
-    cards.forEach((card) => {
-      const title = card.querySelector("h3").textContent.toLowerCase();
-      if (title.includes(searchTerm)) {
-        card.classList.remove("hide");
-        visibleCards++;
-      } else {
-        card.classList.add("hide");
-      }
-    });
+
+  searchInput.addEventListener("input", function () {
+  const searchTerm = normalizeText(searchInput.value);
+cards.forEach((card) => {
+  const title = normalizeText(card.querySelector("h3").textContent);
+  if (title.includes(searchTerm)) {
+    card.classList.remove("hide");
+  } else {
+    card.classList.add("hide");
+  }
+});
+
 
     container.style.justifyContent = visibleCards === 1 ? "center" : "flex-start";
   });
+
+  
 
   // CARRINHO
   document.getElementById("btnCarrinho").addEventListener("click", function () {
