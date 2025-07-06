@@ -9,14 +9,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
-    <script src="carrossel.js" defer></script>
-    <script src="app.js" defer></script>
+ 
+    <script src="appnovo.js" defer></script>
+    
   </head>
   <body>
     <section class="inicio">
-      <nav>
+      <nav id="navbar">
         <div class="nav-esquerda">
-          <a href="#">????</a>
+          <a href="#">Início</a>
           <a href="#busca-sets">Sets Disponíveis</a>
         </div>
         <div class="nav-direita">
@@ -56,6 +57,536 @@
         </div>
       </dialog>
 
+
+      <!-- FILTRO -->
+      <div id="filtro-heroi">
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Abaddon" />
+          Abaddon</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Alchemist" />
+          Alchemist</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="filtro-heroi"
+            value="Ancient Apparition"
+          />
+          Ancient Apparition</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Anti-Mage" />
+          Anti-Mage</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Arc Warden" /> Arc
+          Warden</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Axe" /> Axe</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Bane" />
+          Bane</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Batrider" />
+          Batrider</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Beastmaster" />
+          Beastmaster</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Bloodseeker" />
+          Bloodseeker</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Bounty Hunter" />
+          Bounty Hunter</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Brewmaster" />
+          Brewmaster</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Bristleback" />
+          Bristleback</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Broodmother" />
+          Broodmother</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="filtro-heroi"
+            value="Centaur Warrunner"
+          />
+          Centaur Warrunner</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Chaos Knight" />
+          Chaos Knight</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Chen" />
+          Chen</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Clinkz" />
+          Clinkz</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Clockwerk" />
+          Clockwerk</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Crystal Maiden" />
+          Crystal Maiden</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Dark Seer" /> Dark
+          Seer</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Dark Willow" />
+          Dark Willow</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Dawnbreaker" />
+          Dawnbreaker</label>
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Dazzle" />
+          Dazzle</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Death Prophet" />
+          Death Prophet</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Disruptor" />
+          Disruptor</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Doom" />
+          Doom</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Dragon Knight" />
+          Dragon Knight</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Drow Ranger" />
+          Drow Ranger</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Earth Spirit" />
+          Earth Spirit</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Earthshaker" />
+          Earthshaker</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Elder Titan" />
+          Elder Titan</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Ember Spirit" />
+          Ember Spirit</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Enchantress" />
+          Enchantress</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Enigma" />
+          Enigma</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Faceless Void" />
+          Faceless Void</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Grimstroke" />
+          Grimstroke</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Gyrocopter" />
+          Gyrocopter</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Hoodwink" />
+          Hoodwink</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Huskar" />
+          Huskar</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Invoker" />
+          Invoker</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Io" /> Io</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Jakiro" />
+          Jakiro</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Juggernaut" />
+          Juggernaut</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="filtro-heroi"
+            value="Keeper of the Light"
+          />
+          Keeper of the Light</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Kunkka" />
+          Kunkka</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="filtro-heroi"
+            value="Legion Commander"
+          />
+          Legion Commander</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Lich" />
+          Lich</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Lifestealer" />
+          Lifestealer</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Lina" />
+          Lina</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Lion" />
+          Lion</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Lone Druid" />
+          Lone Druid</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Luna" />
+          Luna</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Lycan" />
+          Lycan</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Marci" />
+          Marci</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Magnus" />
+          Magnus</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Mars" />
+          Mars</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Medusa" />
+          Medusa</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Meepo" />
+          Meepo</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Mirana" />
+          Mirana</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Monkey King" />
+          Monkey King</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Morphling" />
+          Morphling</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Muerta" />
+          Muerta</label
+          >
+
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Naga Siren" />
+          Naga Siren</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="filtro-heroi"
+            value="Nature's Prophet"
+          />
+          Nature's Prophet</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Necrophos" />
+          Necrophos</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Night Stalker" />
+          Night Stalker</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Nyx Assassin" />
+          Nyx Assassin</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Ogre Magi" /> Ogre
+          Magi</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Omniknight" />
+          Omniknight</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Oracle" />
+          Oracle</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="filtro-heroi"
+            value="Outworld Destroyer"
+          />
+          Outworld Destroyer</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Pangolier" />
+          Pangolier</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="filtro-heroi"
+            value="Phantom Assassin"
+          />
+          Phantom Assassin</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Phantom Lancer" />
+          Phantom Lancer</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Phoenix" />
+          Phoenix</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Puck" />
+          Puck</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Pudge" />
+          Pudge</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Pugna" />
+          Pugna</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Queen of Pain" />
+          Queen of Pain</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Razor" />
+          Razor</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Riki" />
+          Riki</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Rubick" />
+          Rubick</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Sand King" /> Sand
+          King</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Shadow Demon" />
+          Shadow Demon</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Shadow Fiend" />
+          Shadow Fiend</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Shadow Shaman" />
+          Shadow Shaman</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Silencer" />
+          Silencer</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Skywrath Mage" />
+          Skywrath Mage</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Slardar" />
+          Slardar</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Slark" />
+          Slark</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Sniper" />
+          Sniper</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Snapfire" />
+          Snapfire</label>
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Spectre" />
+          Spectre</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Spirit Breaker" />
+          Spirit Breaker</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Storm Spirit" />
+          Storm Spirit</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Sven" />
+          Sven</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Techies" />
+          Techies</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="filtro-heroi"
+            value="Templar Assassin"
+          />
+          Templar Assassin</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Terrorblade" />
+          Terrorblade</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Tidehunter" />
+          Tidehunter</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Timbersaw" />
+          Timbersaw</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Tinker" />
+          Tinker</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Tiny" />
+          Tiny</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="filtro-heroi"
+            value="Treant Protector"
+          />
+          Treant Protector</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Troll Warlord" />
+          Troll Warlord</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Tusk" />
+          Tusk</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Underlord" />
+          Underlord</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Undying" />
+          Undying</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Ursa" />
+          Ursa</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="filtro-heroi"
+            value="Vengeful Spirit"
+          />
+          Vengeful Spirit</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Venomancer" />
+          Venomancer</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Viper" />
+          Viper</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Visage" />
+          Visage</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Void Spirit" />
+          Void Spirit</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Warlock" />
+          Warlock</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Weaver" />
+          Weaver</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Windranger" />
+          Windranger</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Winter Wyvern" />
+          Winter Wyvern</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Witch Doctor" />
+          Witch Doctor</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Wraith King" />
+          Wraith King</label
+        >
+        <label
+          ><input type="checkbox" class="filtro-heroi" value="Zeus" />
+          Zeus</label
+        >
+      </div>
+
       <div class="carousel-container">
         <button class="carousel-btn prev">
           <i class="bi bi-arrow-left-circle-fill"></i>
@@ -63,7 +594,7 @@
 
         <div class="carousel-wrapper">
           <div class="carousel">
-            <div class="card">
+            <div class="card" data-hero="Juggernaut">
               <img
                 src="img/hud prontas/ancestralexile.webp"
                 data-img="img/gifsprontos/Ancient_Exile_Preview_11 [1].GIF"
@@ -73,7 +604,7 @@
               <p>R$200,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Phantom Assassin">
               <img
                 src="img/hud prontas/phantom'sfacade.webp"
                 data-img="img/gifsprontos/Phantom's Facade.webp"
@@ -83,7 +614,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Marci">
               <img
                 src="img/hud prontas/faithfulfortune.webp"
                 data-img="img/hud prontas/Faithful Fortune.webp"
@@ -93,7 +624,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Marci">
               <img
                 src="img/hud prontas/moonwarrior.webp"
                 data-img="img/gifsprontos/marci guerreira da lua.jfif"
@@ -103,7 +634,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Huskar">
               <img
                 src="img/hud prontas/sacredchamberguardian.webp"
                 data-img="img/gifsprontos/Sacred Chamber Guardian.webp"
@@ -113,7 +644,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Oracle">
               <img
                 src="img/hud prontas/foreseenhorizons.webp"
                 data-img="img/gifsprontos/oracle.gif"
@@ -123,7 +654,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Doom">
               <img
                 src="img/hud prontas/infernaligneous.webp"
                 data-img="img/gifsprontos/Igneous_Infernal_Preview_3.GIF"
@@ -133,7 +664,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Hoodwink">
               <img
                 src="img/hud prontas/tomokan.webp"
                 data-img="img/sets/Tomo'kan Infantry.png"
@@ -143,7 +674,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Meepo">
               <img
                 src="img/hud prontas/lotusofthemountainbearclan.webp"
                 data-img="img/gifsprontos/Lotus_of_the_Mountain_Bear_Clan_Preview_3.GIF"
@@ -153,7 +684,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Death Prophet">
               <img
                 src="img/hud prontas/louvordobosquesombrio.webp"
                 data-img="img/gifsprontos/Louvor do Bosque Sombrio.GIF"
@@ -163,7 +694,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Naga Siren">
               <img
                 src="img/hud prontas/martyrdomofthebrineborn.webp"
                 data-img="img/gifsprontos/Martyrdom_of_the_Brineborn_Preview_3.GIF"
@@ -173,7 +704,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Alchemist">
               <img
                 src="img/hud prontas/minietauro.webp"
                 data-img="img/sets/Mini e Tauro.png"
@@ -183,7 +714,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Dazzle">
               <img
                 src="img/hud prontas/needlepointnecromancer.webp"
                 data-img="img/gifsprontos/Needlepoint_Necromancer_Preview_3.GIF"
@@ -193,7 +724,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Nyx Assassin">
               <img
                 src="img/hud prontas/mechanyx.webp"
                 data-img="img/gifsprontos/Mecha_Nyx_Preview_3.GIF"
@@ -203,7 +734,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Lion">
               <img
                 src="img/hud prontas/caprinechimera.webp"
                 data-img="img/gifsprontos/Caprine_Chimera_Preview_3.GIF"
@@ -213,7 +744,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Shadow Demon">
               <img
                 src="img/hud prontas/shadowdemon.webp"
                 data-img="img/sets/Vile Vessel.png"
@@ -223,7 +754,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Dawnbreaker">
               <img
                 src="img/hud prontas/starforgereformer.webp"
                 data-img="img/sets/Star Forge Reformer.png"
@@ -233,7 +764,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Muerta">
               <img
                 src="img/hud prontas/moira'srose.webp"
                 data-img="img/sets/Moira's Rose.png"
@@ -243,17 +774,17 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Abaddon">
               <img
                 src="img/hud prontas/spectralshadow.webp"
-                data-img="img/gifsprontos/spectral shadow.gif" 
+                data-img="img/gifsprontos/spectral shadow.gif"
                 alt="Thumb"
               />
               <h3>Sombra Espectral</h3>
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Clinkz">
               <img
                 src="img/hud prontas/witheringpain.webp"
                 data-img="img/gifsprontos/Withering Pain.gif"
@@ -263,7 +794,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Ursa">
               <img
                 src="img/hud prontas/bloodzothebear.webp"
                 data-img="img/gifsprontos/Bloodzo the Bear.webp"
@@ -273,7 +804,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Primal Beast">
               <img
                 src="img/hud prontas/svarogtheinfernal.webp"
                 data-img="img/sets/Svarog the Infernal.png"
@@ -283,7 +814,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Tiny">
               <img
                 src="img/hud prontas/colossalterrorpin.webp"
                 data-img="img/gifsprontos/Colossal_Terrorpin_Preview_12.GIF"
@@ -293,7 +824,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Faceless Void">
               <img
                 src="img/hud prontas/tendrilsofthetimeless.webp"
                 data-img="img/sets/Tendrils of the Timeless.png"
@@ -303,7 +834,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Alchemist">
               <img
                 src="img/hud prontas/darkbrew'stransgression.webp"
                 data-img="img/gifsprontos/Darkbrew's Transgression.webp"
@@ -313,7 +844,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Ursa">
               <img
                 src="img/hud prontas/trophiesofthehallowed Hunt.webp"
                 data-img="img/gifsprontos/Trophies of the Hallowed Hunt.webp"
@@ -323,7 +854,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Marci">
               <img
                 src="img/hud prontas/littlered.webp"
                 data-img="img/sets/Little Red.png"
@@ -333,7 +864,7 @@
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
-            <div class="card">
+            <div class="card" data-hero="Bounty Hunter">
               <img
                 src="img/hud prontas/verminator.webp"
                 data-img="img/sets/Verminator.png"
@@ -344,7 +875,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-             <div class="card">
+            <div class="card" data-hero="Primal Beast">
               <img
                 src="img/hud prontas/darkbehemoth.webp"
                 data-img="img/gifsprontos/Dark_Behemoth_Ambient.GIF"
@@ -355,7 +886,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-            <div class="card">
+            <div class="card" data-hero="Phantom Assassin">
               <img
                 src="img/hud prontas/discipleonikage.webp"
                 data-img="img/sets/Disciple Onikage.png"
@@ -366,7 +897,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-              <div class="card">
+            <div class="card" data-hero="Pudge">
               <img
                 src="img/hud prontas/velveteenvanquisher.webp"
                 data-img="img/sets/Velveteen Vanquisher.png"
@@ -377,7 +908,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-              <div class="card">
+            <div class="card" data-hero="Hoodwink">
               <img
                 src="img/hud prontas/bilgeratbuccaneer.webp"
                 data-img="img/gifsprontos/bilge rat buccaneer.webp"
@@ -388,7 +919,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-              <div class="card">
+            <div class="card" data-hero="Muerta">
               <img
                 src="img/hud prontas/blackwingbandolera.webp"
                 data-img="img/gifsprontos/muerta.gif"
@@ -399,7 +930,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-              <div class="card">
+            <div class="card" data-hero="Abaddon">
               <img
                 src="img/hud prontas/phantomballadeer.webp"
                 data-img="img/gifsprontos/Phantom_Balladeer_Preview_3.GIF"
@@ -410,7 +941,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-              <div class="card">
+            <div class="card" data-hero="Grimstroke">
               <img
                 src="img/hud prontas/elegyofthereaper.webp"
                 data-img="img/gifsprontos/Elegy_of_the_Reaper_Preview_3.GIF"
@@ -421,7 +952,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-              <div class="card">
+            <div class="card" data-hero="Snapfire">
               <img
                 src="img/hud prontas/shellshocksaturnalia.webp"
                 data-img="img/gifsprontos/Shellshock Saturnalia.webp"
@@ -432,7 +963,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-             <div class="card">
+            <div class="card" data-hero="Snapfire">
               <img
                 src="img/hud prontas/ardalanarmsrace.webp"
                 data-img="img/gifsprontos/Ardalan_Arms_Race_Preview_4.GIF"
@@ -443,7 +974,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-             <div class="card">
+            <div class="card" data-hero="Ancient Apparition">
               <img
                 src="img/hud prontas/unchainedentropy.webp"
                 data-img="img/gifsprontos/Unchained_Entropy_Preview_3.GIF"
@@ -454,7 +985,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-             <div class="card">
+            <div class="card" data-hero="Zeus">
               <img
                 src="img/hud prontas/thundervolt.webp"
                 data-img="img/gifsprontos/Thundervolt_Preview_3.GIF"
@@ -465,7 +996,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-             <div class="card">
+            <div class="card" data-hero="Night Stalker">
               <img
                 src="img/hud prontas/dreadofnight.webp"
                 data-img="img/gifsprontos/balanar.webp"
@@ -476,7 +1007,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-             <div class="card">
+            <div class="card" data-hero="Queen of Pain">
               <img
                 src="img/hud prontas/exquisiteagonies.webp"
                 data-img="img/gifsprontos/Exquisite_Agonies_Preview_6.GIF"
@@ -487,18 +1018,18 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-             <div class="card">
+            <div class="card" data-hero="Phoenix">
               <img
                 src="img/hud prontas/crimsondawn.webp"
                 data-img="img/gifsprontos/crimson dawn.gif"
                 alt="Thumb"
               />
-              <h3>Alvorada Carmesim </h3>
+              <h3>Alvorada Carmesim</h3>
               <p>R$00,00</p>
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-             <div class="card">
+            <div class="card" data-hero="Disruptor">
               <img
                 src="img/hud prontas/defenderoftheruins.webp"
                 data-img="img/sets/Defender of the Ruins.png"
@@ -509,7 +1040,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-             <div class="card">
+            <div class="card" data-hero="Axe">
               <img
                 src="img/hud prontas/bootblackbrawler.webp"
                 data-img="img/gifsprontos/Bootblack_Brawler_Preview_3.GIF"
@@ -520,7 +1051,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-             <div class="card">
+            <div class="card" data-hero="Enchantress">
               <img
                 src="img/hud prontas/caeruleanstar.webp"
                 data-img="img/sets/Caerulean Star.png"
@@ -531,7 +1062,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-             <div class="card">
+            <div class="card" data-hero="Clockwerk">
               <img
                 src="img/hud prontas/seadog'sstash.webp"
                 data-img="img/sets/Espólios do Marinheiro - Clockwerk.png"
@@ -542,8 +1073,7 @@
               <button class="adicionar_carrinho">Adicionar ao carrinho</button>
             </div>
 
-            
-             <div class="card">
+            <div class="card" data-hero="Chen">
               <img
                 src="img/hud prontas/houndsofobsession.webp"
                 data-img="img/sets/Hounds of Obsession.png"
@@ -576,13 +1106,24 @@
       <div class="footer-container" id="footer">
         <p>&copy; 2023 Loja Dota 2. Todos os direitos reservados.</p>
         <div class="social-icons">
-          <a class="steam" href="https://steamcommunity.com/id/102372683/" target="_blank"><i class="bi bi-steam"></i></a>
-          <a class="instagram" href="https://instagram.com/alcidessantos3/" target="_blank"><i class="bi bi-instagram"></i></a>
-          <a class="whatsapp" href="#"><i class="bi bi-whatsapp" target="_blank"></i></a>
+          <a
+            class="steam"
+            href="https://steamcommunity.com/id/102372683/"
+            target="_blank"
+            ><i class="bi bi-steam"></i
+          ></a>
+          <a
+            class="instagram"
+            href="https://instagram.com/alcidessantos3/"
+            target="_blank"
+            ><i class="bi bi-instagram"></i
+          ></a>
+          <a class="whatsapp" href="#"
+            ><i class="bi bi-whatsapp" target="_blank"></i
+          ></a>
         </div>
       </div>
     </footer>
 
-    <script src="modal.js"></script>
   </body>
 </html>

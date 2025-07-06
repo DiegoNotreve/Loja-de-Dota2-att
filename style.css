@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Petemoss&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Carter+One&display=swap");
 
 :root {
   --color1: #6aaedb;
@@ -21,8 +21,6 @@ body {
   background-color: #000;
 }
 
-
-
 .inicio {
   height: 100vh;
   background: url("img/Lunaemirana.jpg");
@@ -30,24 +28,54 @@ body {
   background-repeat: no-repeat;
 }
 
+
+
+/* nav.rolagem {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 10px 40px; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+nav.rolagem a {
+  color: #2d80c0;
+  background-color: #fff; 
+}
+
+nav.rolagem a:hover {
+  color: #fff;
+  background-color: #2d80c0; 
+  transition: background-color 0.3s ease-in-out; }
+
+nav.rolagem i:hover {
+  color: #fff;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+} */
+
+
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 10px;
   width: 100%;
   height: 100px;
   gap: 20px;
+  padding: 20px 40px;
+  z-index: 1000;
+  background: transparent;
+  transition: all 0.5s ease-in-out;
 }
 
 .nav-esquerda,
 .nav-direita {
   display: flex;
-  justify-content: space-between;
-  width: 400px;
-  height: auto;
   padding: 10px;
-  gap: 20px;
+  gap: 100px;
 }
 
 .nav-esquerda a,
@@ -67,8 +95,6 @@ nav {
   color: #fff;
 }
 
-
-
 .carrinho i {
   padding: 0 10px;
   color: #6aaedb;
@@ -80,7 +106,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   padding: 20px;
   border-radius: 30px;
   position: absolute;
@@ -104,6 +130,7 @@ nav {
   font-weight: 400;
 }
 
+
 .hero button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -120,85 +147,137 @@ nav {
 }
 
 .hero p {
-    color: #fff;
+  color: #fff;
 }
-
 
 /* SESSÃO 2 */
 
 .busca {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh;
-   background-image: url("https://gamemag.ru/images/cache/News/News171864/957e84aff3-2_2780x1200.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("https://gamemag.ru/images/cache/News/News171864/957e84aff3-2_2780x1200.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
 }
 
-
 .busca-container h2 {
-    text-align: center;
-    font-size: 30px;
-    font-family: "Carter One", sans-serif;
-    margin: 30px 0px;
-    width: 100%;
-    color: #fff;
-    padding: 0 20px;
-    background: rgb(80,197,224);
-background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0%, rgba(168,187,218,1) 44%, rgb(15, 83, 221) 100%);
-    border-radius: 20px;
-    text-shadow: 2px 2px 1px #000;
-    z-index: 2; 
+  font-size: 30px;
+  font-family: "Carter One", sans-serif;
+  margin: 10px 0;
+  color: #fff;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #5fb4e5, #2d80c0, #5fb4e5);
+  background-size: 200% 200%;
+  animation: bgMove 6s ease infinite;
+  border-radius: 20px;
+  text-shadow: 2px 2px 3px #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Keyframes para movimentar o gradiente */
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
 .busca-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 50px;
-    padding: 0 0 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 20px;
 }
 .busca-container input {
   width: 100%;
   max-width: 400px;
-  
-    height: 40px;
-    border-radius: 10px;
-    border: 2px solid #6aaedb;
-    padding: 10px;
-    font-size: 20px;
-    font-family: "Poppins", sans-serif;
-    display: flex;
-    align-items: center;
-}   
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #6aaedb;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+
+input:focus {
+  outline: none;
+  border-color: #0f53dd;
+  box-shadow: 0 0 5px #6aaedb;
+}
 
 .busca-container form {
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    gap: 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-
-
 
 .botao_buscar {
-    
-    padding: 10px 20px;
-    font-size: 18px;
-    border: none;
-    background: #ffcc00;
-    border-radius: 10px;
-    color: black;
-    cursor: pointer;
-    transition: 0.3s;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  background: #ffcc00;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
+/* filtro.heroi */
+
+#filtro-heroi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.5rem;
+  max-width: 95%;
+  margin: 1rem auto 0 auto;
+  padding: 1.5rem;
+  background-color: #2020209c;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #00000080;
+  color: #f5f5f5;
+}
+
+#filtro-heroi label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem;
+  border-radius: 5px;
+  transition: background 0.1s ease;
+  cursor: pointer;
+}
+
+#filtro-heroi label:hover {
+  background-color: #6aaedb;
+}
+
+/* Estilização dos checkboxes */
+#filtro-heroi input[type="checkbox"] {
+  accent-color: #ffcc00; 
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+
+
+
+
 
 
 .carousel-container {
@@ -208,7 +287,7 @@ background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0
   justify-content: center;
   gap: 20px;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 25px;
   overflow: hidden;
   padding: 0 40px; /* espaço pros botões */
 }
@@ -225,10 +304,16 @@ background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0
 }
 
 .card {
-  min-width: calc(20% - 16px); /* 5 cards por vez considerando o gap */
+  min-width: calc(20% - 16px);
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 550px; /* ou uma altura que caiba as imagens + texto + botão */
+  background-color: #2020209c; /* opcional, só pra visualizar */
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .carousel-btn {
@@ -256,238 +341,250 @@ background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0
 }
 
 .card img {
-    max-width: 310px;
-    width: 100%;
-    height: 400px;
-    border-radius: 20px;
-    padding: 10px;
-    object-fit: cover;
+  max-width: 310px;
+  width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  padding: 10px;
+  object-fit: cover;
 }
 .card h3 {
-    text-align: center;
-    color: #fff;
-    background: rgb(80,197,224);
-background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0%, rgba(168,187,218,1) 44%, rgba(31,87,195,1) 100%);
-    max-width: 100%;
-    margin: auto;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-family: "Poppins", sans-serif;
-    text-shadow: 2px 2px 1px #000;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #5fb4e5, #2d80c0, #d5dee4);
+  background-size: 200% 200%;
+  animation: bgMove 6s ease infinite;
+  border-radius: 20px;
+  text-shadow: 2px 2px 3px #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  max-width: 100%;
+  margin: auto;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 1px #000;
+  font-size: 1rem;
+  line-height: 1.2;
+  max-height: 2.4em; /* Limita a 2 linhas */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 .card p {
-    text-align: center;
-    color: #fff;
-    font-family: "Poppins", sans-serif;
-    font-size:18px;
-    margin-top: 10px;
-    background-color: #000;
-    padding: 5px;
-    border-radius: 10px;
-    margin: 10px auto; /* centraliza */
-    max-width: 100%;
-    
+  text-align: center;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+  background-color: #000;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px auto; /* centraliza */
+  max-width: 100%;
 }
 
 .adicionar_carrinho {
-    background-color: #36ca4a;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    margin: 15px auto;
-    max-width: 100%;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+  align-self: center; /* centraliza dentro do flex container */
+  max-width: 200px; /* limita a largura do botão */
+  width: 100%; /* para botão preencher até max-width */
+  margin-top: auto;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #36ca4a;
+  color: #fff;
+  border: none;
+  transition: 0.3s;
+}
+
+
+.card button.adicionar_carrinho {
+  margin-top: auto; /* empurra o botão pra baixo */
 }
 .adicionar_carrinho:hover {
-    background-color: #28a745;
+  background-color: #28a745;
 }
-
-
-
-
-
-
 
 /* carrinho */
 /* Botão do carrinho */
 #btnCarrinho {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    z-index: 9999;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
 
-  #btnCarrinho i {
-    font-size: 24px;
-    color: #000;
-  }	
-  
-  /* Carrinho flutuante */
-  .compras {
-    position: fixed;
-    bottom: 80px;
-    right: 20px;
-    width: 350px;
-    background-color: white;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    border-radius: 10px;
-    display: none; 
-    z-index: 1000;
-    background: rgb(80,197,224);
-background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0%, rgba(168,187,218,1) 44%, rgba(31,87,195,1) 100%);
-  }
+#btnCarrinho i {
+  font-size: 24px;
+  color: #000;
+}
+
+/* Carrinho flutuante */
+.compras {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 350px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  display: none;
+  z-index: 1000;
+  background: rgb(80, 197, 224);
+  background: radial-gradient(
+    circle,
+    rgba(80, 197, 224, 1) 0%,
+    rgba(124, 204, 213, 1) 0%,
+    rgba(168, 187, 218, 1) 44%,
+    rgba(31, 87, 195, 1) 100%
+  );
+}
 
 .compras h3 {
-    font-size: 24px;
-    font-family: "Poppins", sans-serif;
-    margin-bottom: 10px;
-    color: #fff;
-    text-align: center;
-    text-shadow: 2px 2px 4px #000;
-    font-weight: 600;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000;
+  font-weight: 600;
 }
 
 /* Área dos produtos */
 .produtos {
-    max-height: 250px;
-    overflow-y: auto;
+  max-height: 250px;
+  overflow-y: auto;
 }
 
 /* Estilização do produto no carrinho */
 .produto {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    background-color: #d3f1f8;
-    flex-wrap: wrap; 
-   
-  
-   
-  }
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #d3f1f8;
+  flex-wrap: wrap;
+}
 
 /* Imagem do produto */
 .produto img {
-    width: 60px;
-    height: auto;
-    border-radius: 5px;
-    object-fit: contain;
-    flex-shrink: 0; /* Evita que a imagem seja reduzida */
+  width: 60px;
+  height: auto;
+  border-radius: 5px;
+  object-fit: contain;
+  flex-shrink: 0; /* Evita que a imagem seja reduzida */
 }
 
 /* Nome e preço do produto */
 .produto-info {
-    flex-grow: 1;
-    min-width: 120px;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  
+  flex-grow: 1;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 /* Nome do produto */
 .produto h4 {
-    font-size: 15px;
-    font-weight: 600;
-    font-family: "Poppins", sans-serif;
-    white-space: nowrap; 
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 130px; /* Para evitar que o texto estoure a div */
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 130px; /* Para evitar que o texto estoure a div */
 }
 
 /* Preço */
 .produto p {
-    font-size: 20px;
-    color: #030303;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  color: #030303;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Contador de quantidade */
 .contador {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 /* Botões de adicionar/remover quantidade */
-.btn-menos, .btn-mais {
-    padding: 5px 10px;
-    background-color: #e0873e;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    color: white;
-    font-weight: bold;
-    transition: 0.2s;
+.btn-menos,
+.btn-mais {
+  padding: 5px 10px;
+  background-color: #e0873e;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  transition: 0.2s;
 }
 
-.btn-menos:hover, .btn-mais:hover {
-    background-color: #d0742d;
+.btn-menos:hover,
+.btn-mais:hover {
+  background-color: #d0742d;
 }
 
 /* Quantidade */
 .quantidade {
-    font-weight: bold;
-    font-size: 16px;
-    font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Botão de remover produto */
 .remover_carrinho {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    flex-shrink: 0; /* Evita que o botão fique muito pequeno */
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  flex-shrink: 0; /* Evita que o botão fique muito pequeno */
 }
 
 .remover_carrinho:hover {
-    background-color: #cc0000;
+  background-color: #cc0000;
 }
 
 /* Botão de finalizar compra */
 .botao_finalizar {
-    width: 100%;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    font-size: 16px;
-    margin-top: 10px;
-    font-weight: bold;
-    transition: 0.3s;
+  width: 100%;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #4caf50;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .botao_finalizar:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
 
-
- 
 /* Estilos do modal */
 /* Fundo do modal */
 #modal::backdrop {
@@ -505,19 +602,25 @@ background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgb(80,197,224);
-background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0%, rgba(168,187,218,1) 44%, rgba(31,87,195,1) 100%);
+  background: rgb(80, 197, 224);
+  background: radial-gradient(
+    circle,
+    rgba(80, 197, 224, 1) 0%,
+    rgba(124, 204, 213, 1) 0%,
+    rgba(168, 187, 218, 1) 44%,
+    rgba(31, 87, 195, 1) 100%
+  );
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   max-width: 90%;
   max-height: 90%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   z-index: 1001;
 }
 
@@ -556,8 +659,6 @@ background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0
   visibility: visible;
 }
 
-
-
 /* footer */
 
 .footer-container {
@@ -577,30 +678,29 @@ background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0
   z-index: 0;
 }
 
-.footer-container::after{
-  content: '';
+.footer-container::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000b7; 
+  background-color: #000000b7;
   z-index: 1;
-} 
+}
 
 .footer-container > * {
   position: relative;
   z-index: 2;
 }
 
-.footer-container p{
+.footer-container p {
   font-size: 20px;
   font-weight: 600;
   margin: 10px 0;
   text-align: center;
   color: #fff;
   z-index: 9999;
-  
 }
 
 .social-icons {
@@ -608,9 +708,7 @@ background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0
   gap: 20px;
   margin-top: 10px;
   z-index: 2;
-}	
-
-
+}
 
 .social-icons i {
   font-size: 40px;
@@ -619,28 +717,33 @@ background: radial-gradient(circle, rgba(80,197,224,1) 0%, rgba(124,204,213,1) 0
 }
 
 a.steam i {
- color: #fff;
+  color: #fff;
 }
 
 a.steam i:hover {
- background: linear-gradient(to right, #2a475e, #1b2838);
+  background: linear-gradient(to right, #2a475e, #1b2838);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 a.instagram i:hover {
-  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 a.whatsapp i:hover {
-  background: linear-gradient(45deg, #25d366, #128C7E);
+  background: linear-gradient(45deg, #25d366, #128c7e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-
 
 .social-icons i:hover {
   color: #6aaedb;
@@ -661,9 +764,3 @@ a.whatsapp i:hover {
 
 
 
-
-
-
-
-  
-  
