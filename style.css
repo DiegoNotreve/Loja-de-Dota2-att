@@ -125,7 +125,6 @@ nav.rolagem i:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 20px;
   border-radius: 30px;
   position: absolute;
@@ -133,6 +132,8 @@ nav.rolagem i:hover {
   left: 50%;
   transform: translateX(-50%);
 }
+
+
 .hero h1 {
   font-size: 60px;
   text-shadow: 2px 2px 8px #000000b3;
@@ -881,3 +882,43 @@ a.whatsapp i:hover {
     height: auto; /* Ajusta a altura automaticamente */
   }
 }
+
+@media screen and (max-width: 768px) {
+ 
+
+.hero {
+    width: 100%;
+  }
+
+  .card {
+    min-width: calc(100% - 16px);
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+
+  .carousel-btn {
+    font-size: 1.5rem; /* Reduz o tamanho dos botões */
+  }
+  
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .card {
+    min-width: 95%;
+    scroll-snap-align: start;
+  }
+
+  .prev,
+  .next {
+    display: none; /* Esconde botões em telas pequenas */
+  }
+
+  .hero {
+    width: 100%;
+  }
+}
+
