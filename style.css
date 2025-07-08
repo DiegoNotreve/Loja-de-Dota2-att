@@ -28,8 +28,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
-
 /* nav.rolagem {
   background-color: rgba(0, 0, 0, 0.85);
   padding: 10px 40px; 
@@ -57,8 +55,29 @@ nav.rolagem i:hover {
   transition: background-color 0.3s ease-in-out;
 } */
 
+.btn-contato-fixo {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #6aaedb;
+  color: #fff;
+  text-shadow: #000 1px 1px 2px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
 
-nav {
+.btn-contato-fixo:hover {
+  background-color: #4a90e2;
+}
+
+/* nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -93,7 +112,7 @@ nav {
 .nav-esquerda a:hover,
 .nav-direita a:hover {
   color: #fff;
-}
+} */
 
 .carrinho i {
   padding: 0 10px;
@@ -129,7 +148,6 @@ nav {
   font-family: "poppins", sans-serif;
   font-weight: 400;
 }
-
 
 .hero button {
   margin-top: 20px;
@@ -193,48 +211,12 @@ nav {
   }
 }
 
-
 .busca-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 0 20px;
-}
-.busca-container input {
-  width: 100%;
-  max-width: 400px;
-  height: 40px;
-  border-radius: 10px;
-  border: 2px solid #6aaedb;
-  padding: 10px;
-  font-size: 20px;
-  font-family: "Poppins", sans-serif;
-}
-
-
-input:focus {
-  outline: none;
-  border-color: #0f53dd;
-  box-shadow: 0 0 5px #6aaedb;
-}
-
-.busca-container form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
-.botao_buscar {
-  padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  background: #ffcc00;
-  border-radius: 10px;
-  color: black;
-  cursor: pointer;
-  transition: 0.3s;
 }
 
 /* filtro.heroi */
@@ -268,17 +250,11 @@ input:focus {
 
 /* Estilização dos checkboxes */
 #filtro-heroi input[type="checkbox"] {
-  accent-color: #ffcc00; 
+  accent-color: #ffcc00;
   width: 15px;
   height: 15px;
   cursor: pointer;
 }
-
-
-
-
-
-
 
 .carousel-container {
   position: relative;
@@ -314,6 +290,7 @@ input:focus {
   background-color: #2020209c; /* opcional, só pra visualizar */
   border-radius: 20px;
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 .carousel-btn {
@@ -328,8 +305,6 @@ input:focus {
 .carousel-btn:hover {
   transform: scale(1.2);
 }
-
-
 
 .card.hide {
   visibility: hidden;
@@ -398,7 +373,6 @@ input:focus {
   border: none;
   transition: 0.3s;
 }
-
 
 .card button.adicionar_carrinho {
   margin-top: auto; /* empurra o botão pra baixo */
@@ -703,7 +677,7 @@ input:focus {
   z-index: 9999;
 }
 
-.social-icons {
+/* .social-icons {
   display: flex;
   gap: 20px;
   margin-top: 10px;
@@ -759,8 +733,151 @@ a.whatsapp i:hover {
 }
 .social-icons a:hover {
   color: #fff;
+} */
+
+/* Estilos para os ícones sociais */
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  margin-top: 30px;
 }
 
+.wrapper .icon {
+  position: relative;
+  background: transparent;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
 
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .Whatsapp {
+  background: linear-gradient(45deg, #25d366, #128c7e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wrapper .Whatsapp:hover,
+.wrapper .Whatsapp:hover .tooltip,
+.wrapper .Whatsapp:hover .tooltip::before {
+  background: #28a745;
+  color: #fff;
+  -webkit-text-fill-color: white;
+}
+
+.wrapper .steam {
+  background: linear-gradient(to right, #2a475e, #1b2838);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrapper .steam:hover,
+.wrapper .steam:hover .tooltip,
+.wrapper .steam:hover .tooltip::before {
+  background: linear-gradient(to right, #2a475e, #1b2838);
+  -webkit-text-fill-color: white;
+  color: #fff;
+}
+
+.wrapper .instagram {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e94261;
+  color: #ffffff;
+  -webkit-text-fill-color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .inicio {
+    background-position: center;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .nav-direita,
+  .nav-esquerda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .card {
+    min-width: calc(100% - 16px);
+    height: auto; /* Ajusta a altura automaticamente */
+  }
+}

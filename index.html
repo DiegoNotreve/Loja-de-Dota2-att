@@ -9,13 +9,18 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
- 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="appnovo.js" defer></script>
-    
   </head>
   <body>
+    <button id="btnContato" class="btn-contato-fixo">Contato</button>
+
     <section class="inicio">
-      <nav id="navbar">
+     <!--  <nav id="navbar">
         <div class="nav-esquerda">
           <a href="#">Início</a>
           <a href="#busca-sets">Sets Disponíveis</a>
@@ -26,7 +31,7 @@
             >Carrinho <i class="bi bi-cart-check-fill"></i
           ></a>
         </div>
-      </nav>
+      </nav> -->
 
       <div class="hero">
         <h1>Título do site aqui.</h1>
@@ -39,14 +44,6 @@
     <section class="busca" id="busca-sets">
       <div class="busca-container">
         <h2>Busque por seu set aqui</h2>
-        <form action="">
-          <input
-            type="text"
-            placeholder="Digite o nome do item"
-            id="searchInput"
-          />
-          <button class="botao_buscar" type="submit">Buscar</button>
-        </form>
       </div>
 
       <!-- modal -->
@@ -56,7 +53,6 @@
           <button id="fecharBtn">Fechar</button>
         </div>
       </dialog>
-
 
       <!-- FILTRO -->
       <div id="filtro-heroi">
@@ -157,7 +153,8 @@
         >
         <label
           ><input type="checkbox" class="filtro-heroi" value="Dawnbreaker" />
-          Dawnbreaker</label>
+          Dawnbreaker</label
+        >
         <label
           ><input type="checkbox" class="filtro-heroi" value="Dazzle" />
           Dazzle</label
@@ -324,7 +321,7 @@
         <label
           ><input type="checkbox" class="filtro-heroi" value="Muerta" />
           Muerta</label
-          >
+        >
 
         <label
           ><input type="checkbox" class="filtro-heroi" value="Naga Siren" />
@@ -456,7 +453,8 @@
         >
         <label
           ><input type="checkbox" class="filtro-heroi" value="Snapfire" />
-          Snapfire</label>
+          Snapfire</label
+        >
         <label
           ><input type="checkbox" class="filtro-heroi" value="Spectre" />
           Spectre</label
@@ -1104,8 +1102,8 @@
 
     <footer>
       <div class="footer-container" id="footer">
-        <p>&copy; 2023 Loja Dota 2. Todos os direitos reservados.</p>
-        <div class="social-icons">
+        <p>&copy; 2025 Loja Dota 2. Todos os direitos reservados.</p>
+        <!-- <div class="social-icons">
           <a
             class="steam"
             href="https://steamcommunity.com/id/102372683/"
@@ -1121,9 +1119,26 @@
           <a class="whatsapp" href="#"
             ><i class="bi bi-whatsapp" target="_blank"></i
           ></a>
-        </div>
+        </div> -->
+         <ul class="wrapper">
+        <li class="icon Whatsapp">
+            <span class="tooltip">Whatsapp</span>
+            <span><i class="bi bi-whatsapp"></i></span>
+        </li>
+        <li class="icon steam">
+            <span class="tooltip">Steam</span>
+            <span><i class="bi bi-steam"></i></span>
+        </li>
+        <li class="icon instagram">
+            <span class="tooltip">Instagram</span>
+            <span><i class="bi bi-instagram"></i></span>
+        </li>
+       
+       
+    </ul>
       </div>
-    </footer>
+      
 
+    </footer>
   </body>
 </html>

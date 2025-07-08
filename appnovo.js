@@ -1,30 +1,7 @@
-// ===================== BUSCA =====================
-const searchInput = document.getElementById("searchInput");
-const cards = document.querySelectorAll(".card");
-const container = document.querySelector(".container_card");
-
-function normalizeText(text) {
-  return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-}
-
-searchInput.addEventListener("input", function () {
-  const searchTerm = normalizeText(searchInput.value);
-
-  let visiveis = 0;
-  cards.forEach((card) => {
-    const title = normalizeText(card.querySelector("h3").textContent);
-    const match = title.includes(searchTerm);
-    card.classList.toggle("hide", !match);
-    if (match) visiveis++;
-  });
-
-  container.style.justifyContent = visiveis === 1 ? "center" : "flex-start";
-});
-
-// ===================== CARRINHO =====================
+// CARRINHO
 document.getElementById("btnCarrinho").addEventListener("click", function () {
   const carrinho = document.getElementById("comprasid");
-  carrinho.style.display = (carrinho.style.display === "block") ? "none" : "block";
+  carrinho.style.display = carrinho.style.display === "block" ? "none" : "block";
 });
 
 const carrinho = document.querySelector(".produtos");
@@ -34,8 +11,11 @@ function atualizarQuantidade(botao, operacao) {
   let quantidadeSpan = contador.querySelector(".quantidade");
   let quantidade = parseInt(quantidadeSpan.textContent);
 
-  if (operacao === "mais") quantidade++;
-  else if (operacao === "menos" && quantidade > 1) quantidade--;
+  if (operacao === "mais") {
+    quantidade++;
+  } else if (operacao === "menos" && quantidade > 1) {
+    quantidade--;
+  }
 
   quantidadeSpan.textContent = quantidade;
 }
@@ -80,7 +60,7 @@ document.querySelectorAll(".adicionar_carrinho").forEach((botao) => {
   });
 });
 
-// ===================== FINALIZAR COMPRA =====================
+/* BOTÃO FINALIZAR */
 document.querySelector(".botao_finalizar").addEventListener("click", function () {
   const produtos = document.querySelectorAll(".produto");
   if (produtos.length === 0) {
@@ -95,7 +75,6 @@ document.querySelector(".botao_finalizar").addEventListener("click", function ()
     const nome = produto.querySelector("h4").textContent;
     const precoTexto = produto.querySelector("p").textContent;
     const quantidade = parseInt(produto.querySelector(".quantidade").textContent);
-
     const preco = parseFloat(precoTexto.replace("R$", "").replace(",", "."));
     const subtotal = preco * quantidade;
     total += subtotal;
@@ -109,18 +88,18 @@ document.querySelector(".botao_finalizar").addEventListener("click", function ()
   });
 
   mensagem += `\n*Total:* ${totalFormatado}`;
-
   const numeroVendedor = "5581998080374";
   const link = `https://wa.me/${numeroVendedor}?text=${encodeURIComponent(mensagem)}`;
-
   window.open(link, "_blank");
 });
 
-// ===================== CARROSSEL =====================
+/* CARROSSEL */
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".carousel");
+  const cards = document.querySelectorAll(".card");
   const btnPrev = document.querySelector(".prev");
   const btnNext = document.querySelector(".next");
+
   const visibleCards = 5;
   let index = 0;
 
@@ -148,8 +127,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ===================== FILTRO POR HERÓI =====================
+/* FILTRO POR HERÓI */
 const filtros = document.querySelectorAll('.filtro-heroi');
+const cards = document.querySelectorAll('.card');
 
 filtros.forEach(filtro => {
   filtro.addEventListener('change', () => {
@@ -162,13 +142,13 @@ filtros.forEach(filtro => {
       if (selecionados.length === 0 || selecionados.includes(heroi)) {
         card.style.display = "flex";
       } else {
-        card.style.display = 'none';
+        card.style.display = "none";
       }
     });
   });
 });
 
-// ===================== MODAL DE IMAGEM =====================
+/* MODAL DE IMAGEM */
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("modal");
   const modalImg = document.getElementById("modalImg");
@@ -192,4 +172,9 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.close();
     }
   });
+});
+
+
+document.getElementById("btnContato").addEventListener("click", function () {
+  document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
 });
