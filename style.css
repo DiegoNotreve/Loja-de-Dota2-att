@@ -555,7 +555,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   position: fixed;
   top: 50%;
   left: 50%;
@@ -856,7 +855,7 @@ a.whatsapp i:hover {
   }
 
   .card {
-    min-width: calc(100% - 16px);
+    min-width: calc(50% - 16px);
     height: auto; /* Ajusta a altura automaticamente */
   }
 }
@@ -874,6 +873,12 @@ a.whatsapp i:hover {
 
   .carousel-btn {
     font-size: 1.5rem; /* Reduz o tamanho dos botões */
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
   }
 
   
@@ -928,6 +933,12 @@ a.whatsapp i:hover {
   }
   .busca-container h2 {
     font-size: 25px;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
   }
 
   
@@ -996,6 +1007,14 @@ a.whatsapp i:hover {
     font-size: 16px;
     padding: 8px 16px;
   }
+
+  .modal-content {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px;
+  }
+
+
 
   #filtro-heroi {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
